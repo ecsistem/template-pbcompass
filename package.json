@@ -11,7 +11,7 @@
     "prettify": "prettier --write ./src/**/*.{css,scss,js,jsx,ts,tsx}",
     "preview": "vite preview",
     "lint:commit": "commitlint --from=HEAD~1 --to=HEAD",
-    "check-pre-push": "npm run lint:commit && npm run lint && npm run lint:js"
+    "check-pre-push": "npm run lint:commit && npm run lint && npm run lint:js && npm run prettify && npm run build"
   },
   "dependencies": {
     "husky": "^8.0.3",
