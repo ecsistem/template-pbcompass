@@ -10,8 +10,7 @@
     "lint:js": "eslint --fix ./src/**/*.{js,jsx,ts,tsx}",
     "prettify": "prettier --write ./src/**/*.{css,scss,js,jsx,ts,tsx}",
     "preview": "vite preview",
-    "lint:commit": "commitlint --from=HEAD~1 --to=HEAD",
-    "check-pre-push": "npm run lint:commit && npm run lint && npm run lint:js && npm run prettify && npm run build"
+    "prepare": "husky install"
   },
   "dependencies": {
     "husky": "^8.0.3",
@@ -37,8 +36,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettify && npm run lint:commit && git add -A .",
-      "pre-push": "npm run check-pre-push"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
