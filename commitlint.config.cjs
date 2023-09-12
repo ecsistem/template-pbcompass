@@ -13,7 +13,7 @@ module.exports = {
         ],
       ],
       // 'subject-full-stop': [2, 'always', '.'], // Certifique-se de que a mensagem termine com um ponto.
-      'subject-case': [2, 'always', 'sentence-case'], // Certifique-se de que a mensagem esteja em "sentence case".
+      // 'subject-case': [2, 'always', 'sentence-case'], // Certifique-se de que a mensagem esteja em "sentence case".
     },
   };
   
