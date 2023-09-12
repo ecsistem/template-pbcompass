@@ -1,0 +1,57 @@
+{
+  "name": "template-pbcompass",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:js": "eslint --fix ./src/**/*.{js,jsx,ts,tsx}",
+    "prettify": "prettier --write ./src/**/*.{css,scss,js,jsx,ts,tsx}",
+    "preview": "vite preview",
+    "lint:commit": "commitlint --from=HEAD~1 --to=HEAD",
+    "check-pre-push": "npm run lint:commit && npm run lint && npm run lint:js"
+  },
+  "dependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.7"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "prettier": "^3.0.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettify && npm run lint:commit && git add -A .",
+      "pre-push": "npm run check-pre-push"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitlint": {
+      "extends": [
+        "@commitlint/config-conventional"
+      ]
+    }
+  }
+}
