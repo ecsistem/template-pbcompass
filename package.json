@@ -37,8 +37,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettify && npm run lint:commit && git add -A .",
-      "pre-push": "npm run check-pre-push"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
