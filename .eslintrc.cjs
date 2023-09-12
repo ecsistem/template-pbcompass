@@ -6,7 +6,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs', 'commitlint.config.cjs'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'commitlint.config.cjs', 'Dockerfile', 'docker-compose.yml'],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
   rules: {
