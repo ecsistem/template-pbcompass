@@ -1,10 +1,10 @@
-import { useState } from "react";
-import viteLogo from "./../../../public/vite.svg";
-import reactLogo from "./../../assets/images/react.svg";
-import "./App.css";
+import { useState } from 'react'
+import viteLogo from './../../../public/vite.svg'
+import reactLogo from './../../assets/images/react.svg'
+import './App.css'
 
 export function Home() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -29,5 +29,5 @@ export function Home() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  );
+  )
 }
