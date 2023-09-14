@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
-import { MainRoutes } from "./routes/router.tsx";
+import "./assets/css/global.css";
+import { MainRoutes } from "./routes/router";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
