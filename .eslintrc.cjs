@@ -5,6 +5,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    '@rocketseat/eslint-config/react'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs', 'commitlint.config.cjs', 'Dockerfile', 'docker-compose.yml'],
   parser: '@typescript-eslint/parser',
